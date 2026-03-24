@@ -532,6 +532,7 @@ document.getElementById('dp-copy-csv').addEventListener('click',()=>{
 
 // ── bucket checkboxes ─────────────────────────────────────────────────────────
 function buildBuckets(){
+  if(!FAMILIES.length||!FAMILIES[0].bkts)return;
   const list=document.getElementById('bucket-list');
   list.innerHTML='';
   const totals={};
